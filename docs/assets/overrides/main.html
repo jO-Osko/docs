@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block scripts %}
+<!-- This is a bad solution.
+     This block REPLACES the standard one including js files referenced from mkdocs.yml
+     So thing like the search bar stop working. -->
+<script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
+<script>
+    Weglot.initialize({
+        api_key: 'wg_9074186e84c20c74309de9de663689975'
+    });
+</script>
+{% endblock %}
